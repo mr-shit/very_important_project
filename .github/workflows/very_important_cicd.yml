@@ -1,0 +1,19 @@
+name: Very important CICD
+
+on: 
+  schedule:
+  - cron: '*/5 * * * *'
+
+jobs:
+  very_important_job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with: { ref: main }
+      - name: Do very important stuff
+        run: |
+          python -c 'from datetime import datetime; f = open("src/very_important_code.py", "w"); f.write("print(\""+str(datetime.now())+": 💩\")")'
+          git config --global user.name 'mr-shit'
+          git config --global user.email 'mr-shit@users.noreply.github.com'
+          git commit -am "Commit message"
+          git push

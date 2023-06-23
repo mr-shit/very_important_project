@@ -1,2 +1,3 @@
-# very_important_project2
-Very important project 2 💩
+# Very important project 2 💩
+
+How to become a super contributor (version 2)?
